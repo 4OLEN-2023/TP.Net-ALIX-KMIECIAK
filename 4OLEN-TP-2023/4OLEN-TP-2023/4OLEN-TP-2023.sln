@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyVideoGames.Console", "MyVideoGames.Console\MyVideoGames.Console.csproj", "{C05B9C3E-1057-4494-BD89-50292F9FACCF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyVideoGames.Console.DataProvider", "MyVideoGames.Console.DataProvider\MyVideoGames.Console.DataProvider.csproj", "{3DE7CE0E-E20D-4FD8-A8B5-0F998E362187}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{C05B9C3E-1057-4494-BD89-50292F9FACCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C05B9C3E-1057-4494-BD89-50292F9FACCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C05B9C3E-1057-4494-BD89-50292F9FACCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DE7CE0E-E20D-4FD8-A8B5-0F998E362187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE7CE0E-E20D-4FD8-A8B5-0F998E362187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE7CE0E-E20D-4FD8-A8B5-0F998E362187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DE7CE0E-E20D-4FD8-A8B5-0F998E362187}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
