@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "MyVideoGames.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/MyVideoGames.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyVideoGames.Model.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "MyVideoGames.Model/1.0.0": {
+      "type": "project",
+      "path": "../MyVideoGames.Model/MyVideoGames.Model.csproj",
+      "msbuildProject": "../MyVideoGames.Model/MyVideoGames.Model.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "MyVideoGames.Model >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Syril\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\ProjetNET\\tp.net-alix-kmieciak\\4OLEN-TP-2023\\4OLEN-TP-2023\\MyVideoGames.Model\\MyVideoGames.Model.csproj": {
+              "projectPath": "C:\\ProjetNET\\tp.net-alix-kmieciak\\4OLEN-TP-2023\\4OLEN-TP-2023\\MyVideoGames.Model\\MyVideoGames.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
