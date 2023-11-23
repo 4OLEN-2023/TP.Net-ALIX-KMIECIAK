@@ -1,0 +1,110 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "MyVideoGames.Console.DataProvider/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "MyVideoGames.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MyVideoGames.Console.DataProvider.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyVideoGames.Console.DataProvider.dll": {}
+        }
+      },
+      "MyVideoGames.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/MyVideoGames.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyVideoGames.Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MyVideoGames.Console.DataProvider/1.0.0": {
+      "type": "project",
+      "path": "../MyVideoGames.Console.DataProvider/MyVideoGames.Console.DataProvider.csproj",
+      "msbuildProject": "../MyVideoGames.Console.DataProvider/MyVideoGames.Console.DataProvider.csproj"
+    },
+    "MyVideoGames.Model/1.0.0": {
+      "type": "project",
+      "path": "../MyVideoGames.Model/MyVideoGames.Model.csproj",
+      "msbuildProject": "../MyVideoGames.Model/MyVideoGames.Model.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "MyVideoGames.Console.DataProvider >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/ClementFevre/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.WebUI/MyVideoGames.WebUI.csproj",
+      "projectName": "MyVideoGames.WebUI",
+      "projectPath": "/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.WebUI/MyVideoGames.WebUI.csproj",
+      "packagesPath": "/Users/ClementFevre/.nuget/packages/",
+      "outputPath": "/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.WebUI/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/ClementFevre/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.Console.DataProvider/MyVideoGames.Console.DataProvider.csproj": {
+              "projectPath": "/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.Console.DataProvider/MyVideoGames.Console.DataProvider.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.403/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.Console.DataProvider/obj/Debug/net7.0/MyVideoGames.Console.DataProvider.csproj.AssemblyReference.cache
+/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.Console.DataProvider/obj/Debug/net7.0/MyVideoGames.Console.DataProvider.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.Console.DataProvider/obj/Debug/net7.0/MyVideoGames.Console.DataProvider.AssemblyInfoInputs.cache
+/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.Console.DataProvider/obj/Debug/net7.0/MyVideoGames.Console.DataProvider.AssemblyInfo.cs
+/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.Console.DataProvider/obj/Debug/net7.0/MyVideoGames.Console.DataProvider.csproj.CoreCompileInputs.cache
+/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.Console.DataProvider/bin/Debug/net7.0/MyVideoGames.Console.DataProvider.deps.json
+/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.Console.DataProvider/bin/Debug/net7.0/MyVideoGames.Console.DataProvider.dll
+/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.Console.DataProvider/bin/Debug/net7.0/MyVideoGames.Console.DataProvider.pdb
+/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.Console.DataProvider/bin/Debug/net7.0/MyVideoGames.Model.dll
+/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.Console.DataProvider/bin/Debug/net7.0/MyVideoGames.Model.pdb
+/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.Console.DataProvider/obj/Debug/net7.0/MyVideoGames.Console.DataProvider.csproj.CopyComplete
+/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.Console.DataProvider/obj/Debug/net7.0/MyVideoGames.Console.DataProvider.dll
+/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.Console.DataProvider/obj/Debug/net7.0/refint/MyVideoGames.Console.DataProvider.dll
+/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.Console.DataProvider/obj/Debug/net7.0/MyVideoGames.Console.DataProvider.pdb
+/Users/ClementFevre/Downloads/ORT/TP-Master/4OLEN-TP-2023/MyVideoGames.Console.DataProvider/obj/Debug/net7.0/ref/MyVideoGames.Console.DataProvider.dll
