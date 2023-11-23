@@ -1,0 +1,15 @@
+C:\ProjetNET\tp.net-alix-kmieciak\4OLEN-TP-2023\4OLEN-TP-2023\MyVideoGames.Console\bin\Debug\net8.0\MyVideoGames.Console.exe
+C:\ProjetNET\tp.net-alix-kmieciak\4OLEN-TP-2023\4OLEN-TP-2023\MyVideoGames.Console\bin\Debug\net8.0\MyVideoGames.Console.deps.json
+C:\ProjetNET\tp.net-alix-kmieciak\4OLEN-TP-2023\4OLEN-TP-2023\MyVideoGames.Console\bin\Debug\net8.0\MyVideoGames.Console.runtimeconfig.json
+C:\ProjetNET\tp.net-alix-kmieciak\4OLEN-TP-2023\4OLEN-TP-2023\MyVideoGames.Console\bin\Debug\net8.0\MyVideoGames.Console.dll
+C:\ProjetNET\tp.net-alix-kmieciak\4OLEN-TP-2023\4OLEN-TP-2023\MyVideoGames.Console\bin\Debug\net8.0\MyVideoGames.Console.pdb
+C:\ProjetNET\tp.net-alix-kmieciak\4OLEN-TP-2023\4OLEN-TP-2023\MyVideoGames.Console\obj\Debug\net8.0\MyVideoGames.Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProjetNET\tp.net-alix-kmieciak\4OLEN-TP-2023\4OLEN-TP-2023\MyVideoGames.Console\obj\Debug\net8.0\MyVideoGames.Console.AssemblyInfoInputs.cache
+C:\ProjetNET\tp.net-alix-kmieciak\4OLEN-TP-2023\4OLEN-TP-2023\MyVideoGames.Console\obj\Debug\net8.0\MyVideoGames.Console.AssemblyInfo.cs
+C:\ProjetNET\tp.net-alix-kmieciak\4OLEN-TP-2023\4OLEN-TP-2023\MyVideoGames.Console\obj\Debug\net8.0\MyVideoGames.Console.csproj.CoreCompileInputs.cache
+C:\ProjetNET\tp.net-alix-kmieciak\4OLEN-TP-2023\4OLEN-TP-2023\MyVideoGames.Console\obj\Debug\net8.0\MyVideoGames.Console.sourcelink.json
+C:\ProjetNET\tp.net-alix-kmieciak\4OLEN-TP-2023\4OLEN-TP-2023\MyVideoGames.Console\obj\Debug\net8.0\MyVideoGames.Console.dll
+C:\ProjetNET\tp.net-alix-kmieciak\4OLEN-TP-2023\4OLEN-TP-2023\MyVideoGames.Console\obj\Debug\net8.0\refint\MyVideoGames.Console.dll
+C:\ProjetNET\tp.net-alix-kmieciak\4OLEN-TP-2023\4OLEN-TP-2023\MyVideoGames.Console\obj\Debug\net8.0\MyVideoGames.Console.pdb
+C:\ProjetNET\tp.net-alix-kmieciak\4OLEN-TP-2023\4OLEN-TP-2023\MyVideoGames.Console\obj\Debug\net8.0\MyVideoGames.Console.genruntimeconfig.cache
+C:\ProjetNET\tp.net-alix-kmieciak\4OLEN-TP-2023\4OLEN-TP-2023\MyVideoGames.Console\obj\Debug\net8.0\ref\MyVideoGames.Console.dll
