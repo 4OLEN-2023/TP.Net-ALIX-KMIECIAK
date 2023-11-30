@@ -1,0 +1,16 @@
+@model IEnumerable<MyVideoGames.Model.GameModel>
+
+<div class="game-list">
+    @foreach(var game in Model)
+    {
+        <div class="game-item">
+            <h5 class="card-title">@game.Name</h5>
+            <p class="card-text">@game.Id</p>
+            <p class="card-text">@game.ReleaseDate</p>
+            <p class="card-text">@game.PlayTime</p>
+            <game-desc rows="10" readonly="true">@game.Description</game-desc>
+            <p class="card-text">@game.Platform.Name</p>
+        </div>
+        
+    }
+</div>
