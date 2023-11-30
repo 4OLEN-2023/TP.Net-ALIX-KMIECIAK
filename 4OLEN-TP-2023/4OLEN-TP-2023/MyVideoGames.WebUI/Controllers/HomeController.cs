@@ -1,0 +1,38 @@
+using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+using MyVideoGames.WebUI.Models;
+
+namespace MyVideoGames.WebUI.Controllers;
+
+public class HomeController : Controller
+{
+    private readonly ILogger<HomeController> _logger;
+
+    public HomeController(ILogger<HomeController> logger)
+    {
+        _logger = logger;
+    }
+
+    public IActionResult Index()
+    {
+        var viewModel = new HomeViewModel
+        {
+            PageTitle = "Accueil",
+            WelcomeMessage = "Bienvenue sur MyVideoGames!",
+            DateToday = DateTime.Now.ToShortDateString()
+        };
+
+        return View(viewModel); 
+    }
+
+    public IActionResult Privacy()
+    {
+        return View();
+    }
+
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public IActionResult Error()
+    {
+        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+}
