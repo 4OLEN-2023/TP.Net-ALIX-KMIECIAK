@@ -1,0 +1,13 @@
+@using MyVideoGames.Model
+@model GameModel
+
+<div class="row">
+    <div class="col">@Model.Id</div>
+    <div class="col">@Model.Slug</div>
+    <div class="col">@Model.Name</div>
+    <div class="col">@Model.ReleaseDate</div>
+    <div class="col">@Model.Rating / @Model.RatingTop</div>
+    <div class="col">@Model.PlayTime</div>
+    <div class="col"><game-desc rows="3" readonly="true">@Model.Description</game-desc></div>
+    <div class="col">@Model.Plateform.Name</div>
+</div>
