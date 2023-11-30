@@ -1,0 +1,39 @@
+
+@model MyVideoGames.WebUI.Models.GameListViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Mes jeux</title>
+</head>
+<body>
+<div>
+    <h1>Bienvenue sur la page des jeux!</h1>
+
+</div>
+<div class="container">
+    <h1>Liste des Jeux</h1>
+    <div class="row">
+        @foreach (var game in Model.Games)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@game.Name</h5>
+                        <p class="card-text">@game.Id</p>
+                        <p class="card-text">@game.ReleaseDate</p>
+                        <p class="card-text">@game.PlayTime</p>
+                        <p class="card-text">@game.Description</p>
+                        <p class="card-text">@game.Platform.Name</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+</body>
+</html>
