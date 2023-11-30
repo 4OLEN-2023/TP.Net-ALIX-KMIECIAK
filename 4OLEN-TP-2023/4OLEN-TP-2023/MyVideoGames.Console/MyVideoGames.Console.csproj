@@ -7,4 +7,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\MyVideoGames.Console.DataProvider\MyVideoGames.Console.DataProvider.csproj" />
+    </ItemGroup>
+
 </Project>

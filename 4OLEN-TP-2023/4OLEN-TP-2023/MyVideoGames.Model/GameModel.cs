@@ -29,6 +29,6 @@ public class GameModel
     public int PlayTime { get; set; }
 
     [JsonPropertyName("platform")]
-    public PlatformModel Plateform { get; set; }
+    public PlatformModel Platform { get; set; }
     
 }

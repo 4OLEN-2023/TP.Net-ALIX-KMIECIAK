@@ -1,3 +1,33 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
+using MyVideoGames.Model; 
+using MyVideoGames.Console.DataProvider;
+using MyVideoGames.Console.DataProvider.Interface;
 
-Console.WriteLine("Hello, World!");
+class Program
+{
+    static void Main(string[] args)
+    {
+     
+        IGameDataProvider gameDataProvider = new GameDataProvider();
+        GameModel game = gameDataProvider.GetMyGame("/MyVideoGames.Console.DataProvider/JsonFiles/MyGame.json");
+        
+        if (game != null)
+        {
+            DisplayGameData(game);
+        }
+        else
+        {
+            Console.WriteLine("Données non chargées.");
+        }
+    }
+
+    static void DisplayGameData(GameModel game)
+    {
+      
+        Console.WriteLine($"Nom: {game.Name}");
+        Console.WriteLine($"Date de sortie: {game.ReleaseDate}");
+        Console.WriteLine($"Note: {game.Rating} / {game.RatingTop}");
+        Console.WriteLine($"Temps de jeu: {game.PlayTime} heures");
+        Console.WriteLine($"platform: {game.Platform.Name}");
+    }
+}

@@ -7,14 +7,40 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "MyVideoGames.Console/1.0.0": {
+        "dependencies": {
+          "MyVideoGames.Console.DataProvider": "1.0.0"
+        },
         "runtime": {
           "MyVideoGames.Console.dll": {}
+        }
+      },
+      "MyVideoGames.Console.DataProvider/1.0.0": {
+        "dependencies": {
+          "MyVideoGames.Model": "1.0.0"
+        },
+        "runtime": {
+          "MyVideoGames.Console.DataProvider.dll": {}
+        }
+      },
+      "MyVideoGames.Model/1.0.0": {
+        "runtime": {
+          "MyVideoGames.Model.dll": {}
         }
       }
     }
   },
   "libraries": {
     "MyVideoGames.Console/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MyVideoGames.Console.DataProvider/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MyVideoGames.Model/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
