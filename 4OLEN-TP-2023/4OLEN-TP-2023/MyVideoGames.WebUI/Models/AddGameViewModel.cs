@@ -6,7 +6,7 @@ namespace MyVideoGames.WebUI.Models
 {
     public class AddGameViewModel
     {
-        public GameModel GameToAdd { get; set; }
+        public Game GameToAdd { get; set; }
         public IList<SelectListItem> PlatformsAvailable { get; set; }
         
     }

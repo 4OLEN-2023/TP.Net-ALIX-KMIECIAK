@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Razor.TagHelpers;
+using Microsoft.Extensions.Configuration;
+using MyVideoGames.Model.Configuration;
+using MyVideoGames.WebUI.Models; 
 
 namespace MyVideoGames.WebUI.TagHelpers;
 
-public class GameDescTagHelper : TagHelper
+public class GameDescTagHelper(IConfiguration config) : TagHelper
 {
-    [HtmlAttributeName("rows")]
-    public int Rows { get; set; }
+    private readonly int _rows = config.GetSection("Game").Get<GameConfiguration>()!.DescMaxRow;
 
     [HtmlAttributeName("readonly")]
     public bool Readonly { get; set; }
@@ -19,7 +21,6 @@ public class GameDescTagHelper : TagHelper
             output.Attributes.Add("readonly", "readonly");
         }
 
-        output.Attributes.Add("rows", Rows);
+        output.Attributes.Add("rows", _rows);
     }
-        
 }

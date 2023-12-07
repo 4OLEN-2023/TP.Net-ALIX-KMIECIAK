@@ -6,6 +6,6 @@ namespace MyVideoGames.WebUI.Models
 {
     public class GameListViewModel
     {
-        public List<GameModel> Games { get; set; } = new List<GameModel>();
+        public List<Game> Games { get; set; } = new List<Game>();
     }
 }

@@ -2,13 +2,15 @@
 
 namespace MyVideoGames.Model;
 
-public class PlatformModel
+public class Platform
 {
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
+    public int Id { get; set; }
+
     [JsonConstructor]
-    public PlatformModel(string name)
+    public Platform(string name)
     {
         Name = name;
     }

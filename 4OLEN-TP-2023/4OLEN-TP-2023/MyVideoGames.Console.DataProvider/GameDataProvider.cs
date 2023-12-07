@@ -6,14 +6,14 @@ namespace MyVideoGames.Console.DataProvider;
 
 public class GameDataProvider : IGameDataProvider
 {
-    public GameModel GetMyGame(string myGameFile)
+    public Game GetMyGame(string myGameFile)
     {
        //ouverture du fichier et lecture
        
        string jsonString = File.ReadAllText(myGameFile);
        
        //transformation de l'objet en objet 
-       GameModel? game = JsonSerializer.Deserialize<GameModel>(jsonString);
+       Game? game = JsonSerializer.Deserialize<Game>(jsonString);
        
        //renvoi
        return game;
@@ -23,12 +23,12 @@ public class GameDataProvider : IGameDataProvider
     public GameDataProvider()
     {
     }
-    public List<GameModel> GetAllGames()
+    public List<Game> GetAllGames()
     {
         try
         {
             string jsonString = File.ReadAllText("C:\\ProjetNET\\tp.net-alix-kmieciak\\4OLEN-TP-2023\\4OLEN-TP-2023\\MyVideoGames.Console.DataProvider\\JsonFiles\\MyGame.json");
-            return JsonSerializer.Deserialize<List<GameModel>>(jsonString);
+            return JsonSerializer.Deserialize<List<Game>>(jsonString);
         }
         catch (IOException ex)
         {

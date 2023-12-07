@@ -9,7 +9,7 @@ class Program
     {
      
         IGameDataProvider gameDataProvider = new GameDataProvider();
-        GameModel game = gameDataProvider.GetMyGame(@"C:\ProjetNET\tp.net-alix-kmieciak\4OLEN-TP-2023\4OLEN-TP-2023\MyVideoGames.Console.DataProvider\JsonFiles\MyGame.json");
+        Game game = gameDataProvider.GetMyGame(@"C:\ProjetNET\tp.net-alix-kmieciak\4OLEN-TP-2023\4OLEN-TP-2023\MyVideoGames.Console.DataProvider\JsonFiles\MyGame.json");
         
         if (game != null)
         {
@@ -21,7 +21,7 @@ class Program
         }
     }
 
-    static void DisplayGameData(GameModel game)
+    static void DisplayGameData(Game game)
     {
       
         Console.WriteLine($"Nom: {game.Name}");

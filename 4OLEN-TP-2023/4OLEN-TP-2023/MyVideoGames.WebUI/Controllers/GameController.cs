@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using MyVideoGames.Console.DataProvider;
+using MyVideoGames.Console.DataProvider.Interface;
 using MyVideoGames.Model;
 using MyVideoGames.WebUI.Models;
 
@@ -9,10 +10,15 @@ namespace MyVideoGames.WebUI.Controllers
 {
     public class GameController : Controller
     {
+        private readonly IGameDataProvider _gameDataProvider;
+
+        public GameController(IGameDataProvider gameDataProvider)
+        {
+            _gameDataProvider = gameDataProvider;
+        }
+
         public IActionResult Index()
         {
-            var _gameDataProvider = new GameDataProvider();
-
             var games = _gameDataProvider.GetAllGames();
 
             var viewModel = new GameListViewModel
@@ -28,7 +34,7 @@ namespace MyVideoGames.WebUI.Controllers
         {
             var viewModel = new AddGameViewModel
             {
-                GameToAdd = new GameModel(),
+                GameToAdd = new Game(),
                 PlatformsAvailable = IniPlatformsAvailable()
             };
             return View(viewModel);
@@ -50,7 +56,7 @@ namespace MyVideoGames.WebUI.Controllers
                 },
                 new()
                 {
-                    Value = "1",
+                    Value = "3",
                     Text = "Playstation"
                 }
             };

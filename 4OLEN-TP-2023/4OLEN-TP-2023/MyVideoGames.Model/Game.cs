@@ -2,10 +2,12 @@ using System.Text.Json.Serialization;
 
 namespace MyVideoGames.Model;
     
-public class GameModel
+public class Game
 {
+    
     [JsonPropertyName("id")]
     public int Id { get; set; }
+    public int PlatformId { get; set; }
 
     [JsonPropertyName("slug")]
     public string Slug { get; set; }
@@ -29,6 +31,8 @@ public class GameModel
     public int PlayTime { get; set; }
 
     [JsonPropertyName("platform")]
-    public PlatformModel Platform { get; set; }
+    public Platform Platform { get; set; }
+    
+    
     
 }
