@@ -11,17 +11,21 @@ public class GameController: Controller
 {
     // Déclaration d'un GameDataProvider
     public IGameDataProvider gameDataProvider;
-
-
+    
+    // Constructeur avec injection de dépendances
+    public GameController(IGameDataProvider gameDataProvider)
+    {
+        this.gameDataProvider = gameDataProvider;
+    }
+    
     /// <summary>
     /// Création d'une action "Index"
     /// </summary>
     /// <returns></returns>
     public IActionResult Index()
     {
-        GameDataProvider gameDataProvider = new ();
         // Récupération des données via le data-provider
-        List<GameModel>? data = gameDataProvider.GetMyGames();
+        List<Game>? data = gameDataProvider.GetMyGames()?.ToList();
 
         // Création du model pour la vue
         GameListViewModel model = new ()
@@ -42,11 +46,18 @@ public class GameController: Controller
 
     // Création d'une action de type HttpGET
     [HttpGet]
-    public IActionResult Add()
+    public IActionResult AddOrEdit(int? id)
     {
-        AddGameViewModel model = new()
+        Game gameToAddOrEdit = new();
+
+        if (id.HasValue)
         {
-            GameToAdd = new(),
+            gameToAddOrEdit = gameDataProvider.GetGameById(id.Value);
+        }
+
+        AddOrEditGameViewModel model = new()
+        {
+            GameToAddOrEdit = gameToAddOrEdit,
             PlatformsAvailable = InitializePlatforms()
         };
 
@@ -55,17 +66,24 @@ public class GameController: Controller
 
     // Création d'une action de type HttpPost
     [HttpPost]
-    public IActionResult Add(AddGameViewModel model)
+    public IActionResult AddOrEdit(AddOrEditGameViewModel model)
     {
         if (!ModelState.IsValid)
         {
-            //ModelState.AddModelError("Name", "Game Not Found");
             model.PlatformsAvailable = InitializePlatforms();
             return View(model);
         }
 
-        //Quand tout est ok 
-        return RedirectToAction(nameof(this.Index));
+        if(model.GameToAddOrEdit.Id != 0)
+        {
+            gameDataProvider.Update(model.GameToAddOrEdit);
+        }
+        else
+        {
+            gameDataProvider.Add(model.GameToAddOrEdit);
+        }
+
+        return this.RedirectToAction("Index");
     }
 
     private List<SelectListItem> InitializePlatforms()

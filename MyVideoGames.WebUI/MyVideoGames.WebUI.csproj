@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\MyVideoGames.Console.DataProvider\MyVideoGames.Console.DataProvider.csproj" />
+      <ProjectReference Include="..\MyVideoGames.DataContext\MyVideoGames.DataContext.csproj" />
     </ItemGroup>
 
     <ItemGroup>

@@ -1,5 +1,5 @@
 @using MyVideoGames.Model
-@model GameModel
+@model Game
 
 <div class="row">
     <div class="col">@Model.Id</div>
@@ -8,6 +8,6 @@
     <div class="col">@Model.ReleaseDate</div>
     <div class="col">@Model.Rating / @Model.RatingTop</div>
     <div class="col">@Model.PlayTime</div>
-    <div class="col"><game-desc rows="3" readonly="true">@Model.Description</game-desc></div>
-    <div class="col">@Model.Plateform.Name</div>
+    <div class="col"><game-desc readonly="true">@Model.Description</game-desc></div>
+    <div class="col">@Model.Platform.Name</div><div class="col"><a asp-controller="Game" asp-action="AddOrEdit" asp-route-id="@Model.Id">Modifier</a></div>
 </div>

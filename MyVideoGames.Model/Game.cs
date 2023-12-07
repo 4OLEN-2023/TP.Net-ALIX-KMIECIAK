@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace MyVideoGames.Model;
 
-public class GameModel
+public class Game
 {
     // Attribut indiquant à la librairie JSON le nom de la propriété JSON associée au champs
     [JsonPropertyName("id")]
@@ -33,5 +33,7 @@ public class GameModel
     public int PlayTime { get; set; }
 
     [JsonPropertyName("platform")]
-    public PlatformModel Plateform { get; set; }
+    public Platform? Platform { get; set; }
+    
+    public int PlatformId { get; set; }
 }

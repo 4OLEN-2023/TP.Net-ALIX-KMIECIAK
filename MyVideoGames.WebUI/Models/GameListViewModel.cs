@@ -6,5 +6,5 @@ public class GameListViewModel
 {
     public string PageTitle { get; set; }
 
-    public List<GameModel> Games { get; set; }
+    public List<Game> Games { get; set; }
 }

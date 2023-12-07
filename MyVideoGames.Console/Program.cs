@@ -6,9 +6,9 @@ using MyVideoGames.Model;
 GameDataProvider gameDataProvider = new GameDataProvider();
 
 // Appel de la méthode qui retourne les données via un objet
-List<GameModel> myGameModels = gameDataProvider.GetMyGames();
+List<Game> myGameModels = gameDataProvider.GetMyGames().ToList();
 
-foreach (GameModel game in myGameModels)
+foreach (Game game in myGameModels)
 {
     PrintMyGame(game);
 }
@@ -22,7 +22,7 @@ myGameModels.Where(g => g.Name == "rekopskgre");
 Console.ReadLine();
 
 // Méthode permettant l'affichage de notre jeu issue du json
-static void PrintMyGame(GameModel game)
+static void PrintMyGame(Game game)
 {
     var newLine = $"{Environment.NewLine}{Environment.NewLine}";
 
@@ -30,7 +30,7 @@ static void PrintMyGame(GameModel game)
                       $"{game.Id} - {game.Slug} {newLine}" +
                       $"{game.Name} {newLine}" +
                       $"Release date : {game.ReleaseDate.ToShortDateString()}{newLine}" +
-                      $"Platform : {game.Plateform.Name}{newLine}" +
+                      $"Platform : {game.Platform.Name}{newLine}" +
                       $"Rating : {game.Rating}/{game.RatingTop}{newLine}" +
                       $"Play time : {game.PlayTime}h{newLine}" +
                       $"Description : {game.Description}{newLine}");

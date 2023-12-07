@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyVideoGames.Model", "MyVid
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyVideoGames.WebUI", "MyVideoGames.WebUI\MyVideoGames.WebUI.csproj", "{C46D92EA-CA5D-4C5B-A77F-572E9F1FAF4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyVideoGames.DataContext", "MyVideoGames.DataContext\MyVideoGames.DataContext.csproj", "{0E4F0BC2-1185-496A-9AFE-9E0251161078}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{C46D92EA-CA5D-4C5B-A77F-572E9F1FAF4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C46D92EA-CA5D-4C5B-A77F-572E9F1FAF4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C46D92EA-CA5D-4C5B-A77F-572E9F1FAF4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E4F0BC2-1185-496A-9AFE-9E0251161078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E4F0BC2-1185-496A-9AFE-9E0251161078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E4F0BC2-1185-496A-9AFE-9E0251161078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E4F0BC2-1185-496A-9AFE-9E0251161078}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

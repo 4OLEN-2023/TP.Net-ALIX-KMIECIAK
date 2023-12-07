@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\MyVideoGames.DataContext\MyVideoGames.DataContext.csproj" />
       <ProjectReference Include="..\MyVideoGames.Model\MyVideoGames.Model.csproj" />
     </ItemGroup>
 
