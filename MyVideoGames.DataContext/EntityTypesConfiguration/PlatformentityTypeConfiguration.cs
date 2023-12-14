@@ -9,6 +9,7 @@ public class PlatformentityTypeConfiguration : IEntityTypeConfiguration<Platform
     public void Configure(EntityTypeBuilder<Platform> builder)
     {
         builder.HasKey(item => item.Id);
+        builder.HasIndex(item => item.Name).IsUnique();
 
         builder.HasMany(item => item.RelatedGames);
     }

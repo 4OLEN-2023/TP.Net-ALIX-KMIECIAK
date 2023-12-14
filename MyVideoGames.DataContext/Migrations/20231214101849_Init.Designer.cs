@@ -12,8 +12,8 @@ using MyVideoGames.DataContext;
 namespace MyVideoGames.DataContext.Migrations
 {
     [DbContext(typeof(MainDbContext))]
-    [Migration("20231206115915_GameWithPlatform")]
-    partial class GameWithPlatform
+    [Migration("20231214101849_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,45 +29,37 @@ namespace MyVideoGames.DataContext.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("Relational:JsonPropertyName", "id");
+                        .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasAnnotation("Relational:JsonPropertyName", "description_raw");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)")
-                        .HasAnnotation("Relational:JsonPropertyName", "name");
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<int>("PlatformId")
                         .HasColumnType("int");
 
                     b.Property<int>("PlayTime")
-                        .HasColumnType("int")
-                        .HasAnnotation("Relational:JsonPropertyName", "playtime");
+                        .HasColumnType("int");
 
                     b.Property<float>("Rating")
-                        .HasColumnType("real")
-                        .HasAnnotation("Relational:JsonPropertyName", "rating");
+                        .HasColumnType("real");
 
                     b.Property<int>("RatingTop")
-                        .HasColumnType("int")
-                        .HasAnnotation("Relational:JsonPropertyName", "rating_top");
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("ReleaseDate")
-                        .HasColumnType("datetime2")
-                        .HasAnnotation("Relational:JsonPropertyName", "released");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Slug")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasAnnotation("Relational:JsonPropertyName", "slug");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -85,7 +77,7 @@ namespace MyVideoGames.DataContext.Migrations
                             PlayTime = 105,
                             Rating = 5f,
                             RatingTop = 5,
-                            ReleaseDate = new DateTime(2023, 12, 6, 12, 59, 15, 895, DateTimeKind.Local).AddTicks(4220),
+                            ReleaseDate = new DateTime(2023, 12, 14, 11, 18, 49, 828, DateTimeKind.Local).AddTicks(6370),
                             Slug = ""
                         });
                 });
@@ -100,30 +92,36 @@ namespace MyVideoGames.DataContext.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasAnnotation("Relational:JsonPropertyName", "name");
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("ReleaseDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Platforms");
+                    b.HasIndex("Name")
+                        .IsUnique();
 
-                    b.HasAnnotation("Relational:JsonPropertyName", "platform");
+                    b.ToTable("Platforms");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            Name = "Xbox One"
+                            Name = "Xbox One",
+                            ReleaseDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 2,
-                            Name = "Playstation 5"
+                            Name = "Playstation 5",
+                            ReleaseDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 3,
-                            Name = "PC"
+                            Name = "PC",
+                            ReleaseDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 

@@ -1,4 +1,3 @@
-using MyVideoGames.Console.DataProvider;
 using MyVideoGames.Model;
 using MyVideoGames.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -58,10 +57,20 @@ public class GameController: Controller
         AddOrEditGameViewModel model = new()
         {
             GameToAddOrEdit = gameToAddOrEdit,
-            PlatformsAvailable = InitializePlatforms()
+            PlatformsAvailable = InitializePlatforms(gameToAddOrEdit.PlatformId)
         };
 
         return View(model);
+    }
+
+    private List<SelectListItem> InitializePlatforms(int id = 0)
+    {
+        return new List<SelectListItem>
+        {
+            new () { Text = "Xbox", Value = "1", Selected = (id == 1)},
+            new () { Text = "Playstation", Value = "2", Selected = (id == 2)},
+            new () { Text = "PC", Value = "3", Selected = (id == 3)}
+        };
     }
 
     // Création d'une action de type HttpPost
@@ -84,15 +93,5 @@ public class GameController: Controller
         }
 
         return this.RedirectToAction("Index");
-    }
-
-    private List<SelectListItem> InitializePlatforms()
-    {
-        return new List<SelectListItem>
-        {
-            new () { Text = "Xbox", Value = "1" },
-            new () { Text = "Playstation", Value = "2" },
-            new () { Text = "PC", Value = "3" }
-        };
     }
 }

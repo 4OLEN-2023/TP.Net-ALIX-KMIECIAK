@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MyVideoGames.DataContext.Migrations
 {
     /// <inheritdoc />
-    public partial class GameWithPlatform : Migration
+    public partial class Init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,7 +19,8 @@ namespace MyVideoGames.DataContext.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ReleaseDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -54,23 +55,29 @@ namespace MyVideoGames.DataContext.Migrations
 
             migrationBuilder.InsertData(
                 table: "Platforms",
-                columns: new[] { "Id", "Name" },
+                columns: new[] { "Id", "Name", "ReleaseDate" },
                 values: new object[,]
                 {
-                    { 1, "Xbox One" },
-                    { 2, "Playstation 5" },
-                    { 3, "PC" }
+                    { 1, "Xbox One", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 2, "Playstation 5", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 3, "PC", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
                 });
 
             migrationBuilder.InsertData(
                 table: "Games",
                 columns: new[] { "Id", "Description", "Name", "PlatformId", "PlayTime", "Rating", "RatingTop", "ReleaseDate", "Slug" },
-                values: new object[] { 1, "", "GTA V", 1, 105, 5f, 5, new DateTime(2023, 12, 6, 12, 59, 15, 895, DateTimeKind.Local).AddTicks(4220), "" });
+                values: new object[] { 1, "", "GTA V", 1, 105, 5f, 5, new DateTime(2023, 12, 14, 11, 18, 49, 828, DateTimeKind.Local).AddTicks(6370), "" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Games_PlatformId",
                 table: "Games",
                 column: "PlatformId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Platforms_Name",
+                table: "Platforms",
+                column: "Name",
+                unique: true);
         }
 
         /// <inheritdoc />
