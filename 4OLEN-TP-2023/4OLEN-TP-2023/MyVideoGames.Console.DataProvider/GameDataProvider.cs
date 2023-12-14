@@ -1,11 +1,38 @@
 using System.Text.Json;
+using Microsoft.EntityFrameworkCore;
 using MyVideoGames.Console.DataProvider.Interface;
+using MyVideoGames.DataContext;
 using MyVideoGames.Model;
 
 namespace MyVideoGames.Console.DataProvider;
 
 public class GameDataProvider : IGameDataProvider
 {
+    private readonly MainDbContext _context;
+    public GameDataProvider(MainDbContext context)
+    {
+        _context = context;
+    }
+
+    public GameDataProvider()
+    {
+    }
+
+    public IEnumerable<Game> GetMyGames()
+    {
+        //string jsonString = File.ReadAllText(myGamesFile);
+        //IList<Game> games = JsonConvert.DeserializeObject<List<Game>>(jsonString);
+
+        IEnumerable<Game>? games = _context.Games.Include(game => game.Platform).ToList();
+        return games;
+    }
+
+    public void Add(Game gameToAdd)
+    {
+        _context.Add(gameToAdd);
+        _context.SaveChanges();
+    }
+
     public Game GetMyGame(string myGameFile)
     {
        //ouverture du fichier et lecture
@@ -20,9 +47,7 @@ public class GameDataProvider : IGameDataProvider
     }
     
     
-    public GameDataProvider()
-    {
-    }
+    
     public List<Game> GetAllGames()
     {
         try

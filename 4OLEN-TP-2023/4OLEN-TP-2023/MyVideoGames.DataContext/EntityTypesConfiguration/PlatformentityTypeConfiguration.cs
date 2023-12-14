@@ -9,6 +9,8 @@ namespace MyVideoGames.DataContext.EntityTypesConfiguration
         public void Configure(EntityTypeBuilder<Platform> builder)
         {
             builder.HasKey(item => item.Id);
+            
+            builder.HasMany(item => item.RelatedGames);
         }
     }
 }

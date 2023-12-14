@@ -31,7 +31,7 @@ public class Game
     public int PlayTime { get; set; }
 
     [JsonPropertyName("platform")]
-    public Platform Platform { get; set; }
+    public Platform? Platform { get; set; }
     
     
     

@@ -65,12 +65,15 @@ namespace MyVideoGames.WebUI.Controllers
         [HttpPost]
         public IActionResult Add(AddGameViewModel viewModel)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                return RedirectToAction("Index");
+                viewModel.PlatformsAvailable = IniPlatformsAvailable();
+                return View(viewModel);
             }
 
-            return View(viewModel);
+            _gameDataProvider.Add(viewModel.GameToAdd);
+
+            return this.RedirectToAction("Index");
         }
     }
 }

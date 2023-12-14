@@ -10,8 +10,10 @@ public class Platform
     public int Id { get; set; }
 
     [JsonConstructor]
-    public Platform(string name)
+    public Platform()
     {
-        Name = name;
     }
+    
+    public IList<Game>? RelatedGames { get; set; }
+    
 }
