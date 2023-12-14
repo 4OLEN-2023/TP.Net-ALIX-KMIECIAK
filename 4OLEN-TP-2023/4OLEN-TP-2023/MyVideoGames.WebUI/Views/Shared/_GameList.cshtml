@@ -10,6 +10,7 @@
             <p class="card-text">@game.PlayTime</p>
             <game-desc readonly="true">@game.Description</game-desc>
             <p class="card-text">@game.Platform.Name</p>
+            <div class="col"><a asp-controller="Game" asp-action="AddOrEdit" asp-route-id="@game.Id">Modifier</a></div>
         </div>
         
     }

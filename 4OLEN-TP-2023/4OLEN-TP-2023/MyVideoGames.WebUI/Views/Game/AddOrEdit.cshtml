@@ -1,0 +1,40 @@
+@model AddOrEditGameViewModel
+
+<form method="post" asp-action="AddOrEdit" asp-controller="Game">
+    <div asp-validation-summary="All"></div>
+    <input asp-for="GameToAddOrEdit.Id" type="hidden"/>
+    <div class="form-group">
+        <label asp-for="GameToAddOrEdit.Name"></label>
+        <input asp-for="GameToAddOrEdit.Name" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="GameToAddOrEdit.Slug"></label>
+        <input asp-for="GameToAddOrEdit.Slug" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="GameToAddOrEdit.ReleaseDate"></label>
+        <input asp-for="GameToAddOrEdit.ReleaseDate" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="GameToAddOrEdit.Rating"></label>
+        <input asp-for="GameToAddOrEdit.Rating" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="GameToAddOrEdit.RatingTop"></label>
+        <input asp-for="GameToAddOrEdit.RatingTop" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="GameToAddOrEdit.PlayTime"></label>
+        <input asp-for="GameToAddOrEdit.PlayTime" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="GameToAddOrEdit.Description"></label>
+        <input asp-for="GameToAddOrEdit.Description" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="GameToAddOrEdit.Platform"></label>
+        <select class="form-select" aria-label="Default select example" asp-for="GameToAddOrEdit.PlatformId" asp-items="@Model.PlatformsAvailable"></select>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+</form>

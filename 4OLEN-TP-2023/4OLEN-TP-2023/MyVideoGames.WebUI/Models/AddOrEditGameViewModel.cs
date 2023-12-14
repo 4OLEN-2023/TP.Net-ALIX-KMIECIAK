@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace MyVideoGames.WebUI.Models
 {
-    public class AddGameViewModel
+    public class AddOrEditGameViewModel
     {
-        public Game GameToAdd { get; set; }
-        public IList<SelectListItem> PlatformsAvailable { get; set; }
+        public Game GameToAddOrEdit { get; set; }
+        public IList<SelectListItem>? PlatformsAvailable { get; set; }
         
     }
 }

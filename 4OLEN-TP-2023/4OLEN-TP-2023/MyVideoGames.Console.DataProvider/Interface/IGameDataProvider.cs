@@ -10,4 +10,8 @@ public interface IGameDataProvider
     public IEnumerable<Game> GetMyGames();
 
     public void Add(Game gameToAdd);
+    public Game? GetGameById(int gameId);
+    
+    public void Update(Game gameToAdd);
+
 }

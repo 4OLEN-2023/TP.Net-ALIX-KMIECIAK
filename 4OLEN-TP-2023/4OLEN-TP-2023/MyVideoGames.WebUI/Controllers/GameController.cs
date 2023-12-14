@@ -19,25 +19,33 @@ namespace MyVideoGames.WebUI.Controllers
 
         public IActionResult Index()
         {
-            var games = _gameDataProvider.GetAllGames();
+            var games = _gameDataProvider.GetMyGames();
 
             var viewModel = new GameListViewModel
             {
-                Games = games
+                Games = games.ToList()
             };
 
             return View(viewModel);
         }
 
         [HttpGet]
-        public IActionResult Add()
+        public IActionResult AddOrEdit(int? id = null)
         {
-            var viewModel = new AddGameViewModel
+            Game gameToAddOrEdit = new();
+
+            if (id.HasValue)
             {
-                GameToAdd = new Game(),
+                gameToAddOrEdit = _gameDataProvider.GetGameById(id.Value);
+            }
+
+            AddOrEditGameViewModel model = new()
+            {
+                GameToAddOrEdit = gameToAddOrEdit,
                 PlatformsAvailable = IniPlatformsAvailable()
             };
-            return View(viewModel);
+
+            return View(model);
         }
 
         private static List<SelectListItem> IniPlatformsAvailable()
@@ -51,19 +59,19 @@ namespace MyVideoGames.WebUI.Controllers
                 },
                 new()
                 {
-                    Value = "2",
+                    Value = "3",
                     Text = "PC"
                 },
                 new()
                 {
-                    Value = "3",
+                    Value = "2",
                     Text = "Playstation"
                 }
             };
         }
 
         [HttpPost]
-        public IActionResult Add(AddGameViewModel viewModel)
+        public IActionResult AddOrEdit(AddOrEditGameViewModel viewModel)
         {
             if (!ModelState.IsValid)
             {
@@ -71,7 +79,14 @@ namespace MyVideoGames.WebUI.Controllers
                 return View(viewModel);
             }
 
-            _gameDataProvider.Add(viewModel.GameToAdd);
+            if (viewModel.GameToAddOrEdit.Id != 0)
+            {
+                _gameDataProvider.Update(viewModel.GameToAddOrEdit);
+            }
+            else
+            {
+                _gameDataProvider.Add(viewModel.GameToAddOrEdit);
+            }
 
             return this.RedirectToAction("Index");
         }

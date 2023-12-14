@@ -33,6 +33,17 @@ public class GameDataProvider : IGameDataProvider
         _context.SaveChanges();
     }
 
+    public Game? GetGameById(int gameId)
+    {
+        return _context.Games.SingleOrDefault(game => game.Id == gameId);
+    }
+
+    public void Update(Game gameToAdd)
+    {
+        _context.Update(gameToAdd);
+        _context.SaveChanges();
+    }
+
     public Game GetMyGame(string myGameFile)
     {
        //ouverture du fichier et lecture

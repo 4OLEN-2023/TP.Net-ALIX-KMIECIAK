@@ -1,42 +1,8 @@
-@model AddGameViewModel
+@model AddOrEditGameViewModel
 
-<form method="post" asp-action="Add" asp-controller="Game">
-    <div class="form-group">
-        <label asp-for="GameToAdd.Id"></label>
-        <input asp-for="GameToAdd.Id" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label asp-for="GameToAdd.Name"></label>
-        <input asp-for="GameToAdd.Name" class="form-control"/>
-    </div>
-    <div class="form-group">
-        <label asp-for="GameToAdd.Slug"></label>
-        <input asp-for="GameToAdd.Slug" class="form-control" /> 
-    </div>
-    <div class="form-group">
-        <label asp-for="GameToAdd.ReleaseDate"></label>
-        <input asp-for="GameToAdd.ReleaseDate" class="form-control" /> 
-    </div>
-    <div class="form-group">
-        <label asp-for="GameToAdd.Rating"></label>
-        <input asp-for="GameToAdd.Rating" class="form-control"/>
-    </div>
-    <div class="form-group">
-        <label asp-for="GameToAdd.RatingTop"></label>
-        <input asp-for="GameToAdd.RatingTop" class="form-control" /> 
-    </div>
-    <div class="form-group">
-        <label asp-for="GameToAdd.PlayTime"></label>
-        <input asp-for="GameToAdd.PlayTime" class="form-control" /> 
-    </div>
-    <div class="form-group">
-        <label asp-for="GameToAdd.Description"></label>
-        <input asp-for="GameToAdd.Description" class="form-control" /> 
-    </div>
-    <div class="form-group">
-        <label asp-for="GameToAdd.Platform"></label>
-        <select class="form-select" aria-label="Default select example" asp-for="GameToAdd.Platform.Name" asp-items="@Model.PlatformsAvailable"></select>
-    </div>
-    <br>
-    <button type="submit" class="btn btn-primary">Ajouter</button>
-</form>
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>title</h2>
