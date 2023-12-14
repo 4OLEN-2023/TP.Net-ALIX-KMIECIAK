@@ -14,7 +14,7 @@ public class MainDbContextFactory : IDesignTimeDbContextFactory<MainDbContext>
 
         var configuration = configurationBuilder.Build();
 
-        DbContextOptionsBuilder builder = new DbContextOptionsBuilder();
+        DbContextOptionsBuilder<MainDbContext> builder = new DbContextOptionsBuilder<MainDbContext>();
         builder.UseSqlServer(configuration.GetConnectionString("GameDatabase"));
 
         MainDbContext context = new MainDbContext(builder.Options);

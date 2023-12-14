@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using MyVideoGames.Model;
 using MyVideoGames.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -6,6 +7,7 @@ using MyVideoGames.Console.DataProvider.Interfaces;
 
 namespace MyVideoGames.WebUI.Controllers;
 
+[Authorize]
 public class GameController: Controller
 {
     // Déclaration d'un GameDataProvider

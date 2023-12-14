@@ -1,11 +1,13 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MyVideoGames.DataContext.EntityTypesConfiguration;
 using MyVideoGames.Model;
 
 namespace MyVideoGames.DataContext;
 
-public class MainDbContext : DbContext
+public class MainDbContext : IdentityDbContext<IdentityUser>
 {
     protected MainDbContext()
     {

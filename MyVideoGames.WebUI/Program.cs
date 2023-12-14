@@ -1,9 +1,11 @@
 using MyVideoGames.WebUI.ExtensionMethods;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using MyVideoGames.DataContext;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
 builder.Services.AddDependencyInjection(builder.Configuration);
 
 var app = builder.Build();
@@ -26,5 +28,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Game}/{action=Index}/{id?}");
+
+app.MapRazorPages();
 
 app.Run();

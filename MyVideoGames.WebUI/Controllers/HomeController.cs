@@ -17,7 +17,7 @@ public class HomeController : Controller
     {
         HomeViewModel model = new()
         {
-            PageTitle = "Ma collection de jeux vidéos",
+            PageTitle = Resources.Strings.WelcomeMessage,
             WelcomeMessage = DateTime.Now.ToShortDateString()
         };
 

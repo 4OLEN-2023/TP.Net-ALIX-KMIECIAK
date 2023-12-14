@@ -1,0 +1,6 @@
+﻿services:
+  myvideogames.webui:
+    image: myvideogames.webui
+    build:
+      context: .
+      dockerfile: MyVideoGames.WebUI/Dockerfile

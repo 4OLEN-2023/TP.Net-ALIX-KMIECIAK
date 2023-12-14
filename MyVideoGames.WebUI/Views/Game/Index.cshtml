@@ -1,3 +1,4 @@
+@using MyVideoGames.WebUI.Resources
 @model GameListViewModel
 
 @{
@@ -6,6 +7,7 @@
 
 @*Affichage à l'aide d'un foreach (classique)*@
 <email>c.fevre166@gmail.com</email>
+
 
 @* @foreach (var game in Model.Games) *@
 @* { *@
@@ -26,8 +28,10 @@
 {
     <partial name="Partials/_GameList" model="@game"/>
 }
+
 @section ORT {
-    <h1>TESTTESTEDRTERG</h1>    
+    @* <h1>@Resources.Strings.WelcomeMessage</h1>*@
+    <h1>Bienvenue !</h1>    
 }
 
 @section Scripts

@@ -10,6 +10,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyVideoGames.WebUI", "MyVid
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyVideoGames.DataContext", "MyVideoGames.DataContext\MyVideoGames.DataContext.csproj", "{0E4F0BC2-1185-496A-9AFE-9E0251161078}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E34F738D-8338-46AB-886C-204326C53935}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyVideoGames.WebUI.UnitTest", "MyVideoGames.WebUI.UnitTest\MyVideoGames.WebUI.UnitTest.csproj", "{ADBDB92D-D894-4E27-A82F-4754E2B0F69C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +43,11 @@ Global
 		{0E4F0BC2-1185-496A-9AFE-9E0251161078}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E4F0BC2-1185-496A-9AFE-9E0251161078}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E4F0BC2-1185-496A-9AFE-9E0251161078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADBDB92D-D894-4E27-A82F-4754E2B0F69C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADBDB92D-D894-4E27-A82F-4754E2B0F69C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADBDB92D-D894-4E27-A82F-4754E2B0F69C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADBDB92D-D894-4E27-A82F-4754E2B0F69C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal
