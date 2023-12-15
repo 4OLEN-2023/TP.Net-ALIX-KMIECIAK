@@ -1,0 +1,11 @@
+﻿<!--Conteneur global de l'application - déclaration des éléments à configurer au niveau global
+xnlns = Définit un espace de noms qualifiés pour xaml éléments spécifiques
+xnlns:x = Espace de nom renomé "x" pour des raisons de lisibilité
+Déclaration du Namespace-->
+<Application x:Class="MyVideoGames.WPFUI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <!--Ajoute ici les ressources globales à l'application-->
+    </Application.Resources>
+</Application>

@@ -62,9 +62,9 @@ namespace MyVideoGames.WebUI.UnitTest
             this.SeedData(size, context);
 
             // Création du service
-            GameDataProvider gameService = new GameDataProvider(context);
+            GameDataProvider gameDataProvider = new GameDataProvider(context);
 
-            var controller = new GameController(gameService);
+            var controller = new GameController(gameDataProvider);
 
             return controller;
         }
