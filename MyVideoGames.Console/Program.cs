@@ -3,7 +3,7 @@ using MyVideoGames.Console.DataProvider;
 using MyVideoGames.Model;
 
 // Création d'un GameDataProvider
-GameDataProvider gameDataProvider = new GameDataProvider();
+GameDataProvider gameDataProvider = new GameDataProvider(null);
 
 // Appel de la méthode qui retourne les données via un objet
 List<Game> myGameModels = gameDataProvider.GetMyGames().ToList();
