@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using MyVideoGames.Console.DataProvider;
@@ -8,6 +9,7 @@ using MyVideoGames.WebUI.Models;
 
 namespace MyVideoGames.WebUI.Controllers
 {
+    [Authorize]
     public class GameController : Controller
     {
         private readonly IGameDataProvider _gameDataProvider;

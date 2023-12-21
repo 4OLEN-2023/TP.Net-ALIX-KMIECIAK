@@ -1,12 +1,14 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MyVideoGames.DataContext.EntityTypesConfiguration;
 using MyVideoGames.Model;  
 
 namespace MyVideoGames.DataContext
 {
-    public class MainDbContext : DbContext
+    public class MainDbContext : IdentityDbContext<IdentityUser>
     {
-        public MainDbContext(DbContextOptions options) : base(options)
+        public MainDbContext(DbContextOptions<MainDbContext> options) : base(options)
         {
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

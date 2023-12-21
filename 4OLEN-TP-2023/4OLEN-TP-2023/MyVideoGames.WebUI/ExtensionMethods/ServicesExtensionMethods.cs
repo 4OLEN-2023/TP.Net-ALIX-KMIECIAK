@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using MyVideoGames.Console.DataProvider;
 using MyVideoGames.Console.DataProvider.Interface;
 using MyVideoGames.DataContext;
@@ -17,6 +19,11 @@ namespace MyVideoGames.WebUI.ExtensionMethods
 
             services.AddScoped<IGameDataProvider, GameDataProvider>();
 
+            services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddDefaultUI()
+                .AddDefaultTokenProviders()
+                .AddEntityFrameworkStores<MainDbContext>();
+            
             return services;
         }
 
