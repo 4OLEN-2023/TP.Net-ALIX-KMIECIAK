@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using MyVideoGames.WebUI.Models;
+using MyVideoGames.WebUI.Resources;
 
 namespace MyVideoGames.WebUI.Controllers;
 
@@ -18,7 +19,7 @@ public class HomeController : Controller
         var viewModel = new HomeViewModel
         {
             PageTitle = "Accueil",
-            WelcomeMessage = "Bienvenue sur MyVideoGames!",
+            WelcomeMessage = Strings.WelcomeMessage,
             DateToday = DateTime.Now.ToShortDateString()
         };
 
