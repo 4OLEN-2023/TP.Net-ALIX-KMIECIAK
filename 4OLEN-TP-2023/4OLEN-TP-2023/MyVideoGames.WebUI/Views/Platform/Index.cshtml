@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Platform";
+}
+
+<div class="text-center">
+    <h1 class="display-4">List platforms</h1>
+</div>
+
+@foreach (var platform in Model.Platforms)
+{
+    <partial name="_PlatformList" model="@platform"/>
+}

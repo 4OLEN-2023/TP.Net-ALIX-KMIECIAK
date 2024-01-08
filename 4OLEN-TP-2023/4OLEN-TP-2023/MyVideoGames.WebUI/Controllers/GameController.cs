@@ -9,14 +9,16 @@ using MyVideoGames.WebUI.Models;
 
 namespace MyVideoGames.WebUI.Controllers
 {
-    [Authorize]
+
     public class GameController : Controller
     {
         private readonly IGameDataProvider _gameDataProvider;
-
-        public GameController(IGameDataProvider gameDataProvider)
+        private readonly IPlatformDataProvider platformDataProvider;
+        
+        public GameController(IGameDataProvider gameDataProvider, IPlatformDataProvider _platformDataProvider)
         {
             _gameDataProvider = gameDataProvider;
+            platformDataProvider = _platformDataProvider;
         }
 
         public IActionResult Index()
@@ -50,26 +52,13 @@ namespace MyVideoGames.WebUI.Controllers
             return View(model);
         }
 
-        private static List<SelectListItem> IniPlatformsAvailable()
+        public List<SelectListItem> IniPlatformsAvailable()
         {
-            return new List<SelectListItem>
+            return platformDataProvider.GetPlatforms().Select(platform => new SelectListItem
             {
-                new()
-                {
-                    Value = "1",
-                    Text = "Xbox"
-                },
-                new()
-                {
-                    Value = "3",
-                    Text = "PC"
-                },
-                new()
-                {
-                    Value = "2",
-                    Text = "Playstation"
-                }
-            };
+                Text = platform.Name,
+                Value = platform.Id.ToString()
+            }).ToList();
         }
 
         [HttpPost]
@@ -89,6 +78,13 @@ namespace MyVideoGames.WebUI.Controllers
             {
                 _gameDataProvider.Add(viewModel.GameToAddOrEdit);
             }
+
+            return this.RedirectToAction("Index");
+        }
+        
+        public IActionResult Delete(int id)
+        {
+            _gameDataProvider.Delete(id);
 
             return this.RedirectToAction("Index");
         }

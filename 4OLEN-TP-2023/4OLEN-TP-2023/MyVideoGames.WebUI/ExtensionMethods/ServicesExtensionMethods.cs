@@ -18,6 +18,7 @@ namespace MyVideoGames.WebUI.ExtensionMethods
             });
 
             services.AddScoped<IGameDataProvider, GameDataProvider>();
+            services.AddScoped<IPlatformDataProvider, PlatformDataProvider>();
 
             services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddDefaultUI()

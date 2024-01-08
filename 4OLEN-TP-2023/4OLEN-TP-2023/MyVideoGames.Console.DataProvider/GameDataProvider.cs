@@ -23,7 +23,7 @@ public class GameDataProvider : IGameDataProvider
         //string jsonString = File.ReadAllText(myGamesFile);
         //IList<Game> games = JsonConvert.DeserializeObject<List<Game>>(jsonString);
 
-        IEnumerable<Game>? games = _context.Games.Include(game => game.Platform).ToList();
+        IEnumerable<Game>? games = _context.Games.Include(game => game.Platform);
         return games;
     }
 
@@ -41,6 +41,12 @@ public class GameDataProvider : IGameDataProvider
     public void Update(Game gameToAdd)
     {
         _context.Update(gameToAdd);
+        _context.SaveChanges();
+    }
+    
+    public void Delete(int gameId)
+    {
+        _context.Games.Remove(GetGameById(gameId));
         _context.SaveChanges();
     }
 

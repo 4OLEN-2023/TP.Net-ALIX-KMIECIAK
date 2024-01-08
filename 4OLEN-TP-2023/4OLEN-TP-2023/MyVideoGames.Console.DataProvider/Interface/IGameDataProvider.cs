@@ -13,5 +13,7 @@ public interface IGameDataProvider
     public Game? GetGameById(int gameId);
     
     public void Update(Game gameToAdd);
+    
+    public void Delete(int gameId);
 
 }
