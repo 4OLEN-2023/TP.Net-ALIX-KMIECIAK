@@ -9,7 +9,7 @@ using MyVideoGames.WebUI.Models;
 
 namespace MyVideoGames.WebUI.Controllers
 {
-
+    //[Authorize]
     public class GameController : Controller
     {
         private readonly IGameDataProvider _gameDataProvider;
