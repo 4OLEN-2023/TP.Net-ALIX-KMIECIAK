@@ -14,11 +14,9 @@ namespace FlightManager.WebUI.Controllers
             _context = context;
         }
         
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var flights = await _context.Flights
-                .Include(f => f.Passengers)
-                .ToListAsync();
+            var flights = _context.Flights.ToList(); 
             return View(flights);
         }
     }

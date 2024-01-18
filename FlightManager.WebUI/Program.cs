@@ -1,4 +1,5 @@
 using FlightManager.WebUI;
+using FlightManager.WebUI.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,5 +29,13 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+using (var scope = app.Services.CreateScope())
+{
+    var serviceProvider = scope.ServiceProvider;
+    var context = serviceProvider.GetRequiredService<FlightManagerContext>();
+    DataInitializer.Initialize(context);
+    PassengerDataInitializer.Initialize(context);
+}
 
 app.Run();

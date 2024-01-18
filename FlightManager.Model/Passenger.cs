@@ -15,5 +15,6 @@ namespace FlightManager.Model
         public double TicketPrice { get; set; }
         public bool IsCheckedId { get; set; }
         public Flight Flight { get; set; }
+
     }
 }

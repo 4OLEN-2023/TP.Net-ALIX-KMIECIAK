@@ -1,3 +1,39 @@
 ﻿@{
     ViewData["Title"] = "Flight List";
 }
+@model IEnumerable<FlightManager.Model.Flight>
+
+<h1>Liste des vols</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>Numéro de vol</th>
+            <th>Date de départ</th>
+            <th>Destination</th>
+            <th>Nombres de places</th>
+            <th>Message d'embarquement</th>
+            <th>Retard</th>
+            <th>Total vente</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var flight in Model)
+        {
+            <tr>
+                
+                <td>@flight.Id</td>
+                <td>@flight.TakeOffDate.ToShortDateString()</td>
+                <td>@flight.Destination</td>
+                <td>@flight.SeatCount</td>
+                <td>@flight.OnBoardingMessage</td>
+                <td>@flight.IsDelayed</td>
+                <td>@flight.NetSales</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
