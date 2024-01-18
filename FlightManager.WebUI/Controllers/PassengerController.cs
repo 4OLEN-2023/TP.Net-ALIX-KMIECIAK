@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace FlightManager.WebUI.Controllers
-{
+{ 
+    //[Authorize]
     public class PassengerController : Controller
     {
+       
         private readonly FlightManagerContext _context;
 
         public PassengerController(FlightManagerContext context)

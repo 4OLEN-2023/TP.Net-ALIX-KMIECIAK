@@ -2,9 +2,11 @@
 using FlightManager.WebUI.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FlightManager.WebUI.Controllers
 {
+    //[Authorize]
     public class FlightController : Controller
     {
         private readonly FlightManagerContext _context;
